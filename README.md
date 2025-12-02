@@ -2,11 +2,7 @@
 
 GIMP plugin that applies PS1/N64 style pixelation effects, ideal for creating retro textures for 3D objects.
 
-<<<<<<< HEAD
-RetroPixel is only compatible with GIMP 3.0 or later.
-=======
 RetroPixel Effect
->>>>>>> origin/main
 
 ## Features
 
@@ -19,15 +15,9 @@ RetroPixel Effect
 ## Preview
 
 <div align="center">
-<<<<<<< HEAD
   <img src="screenshot_1.png" width="60%" alt="RetroPixel GIMP"/>
   <br/>
   <img src="screenshot_2.png" width="60%" alt="RetroPixel Effect GIMP"/>
-=======
-  <img src="screenshot_1.png" width="60%" alt="Original Image"/>
-  <br/>
-  <img src="screenshot_2.png" width="60%" alt="RetroPixel Effect Applied"/>
->>>>>>> origin/main
 </div>
 
 ## Parameters
@@ -44,7 +34,6 @@ RetroPixel Effect
 
 ## Usage
 
-<<<<<<< HEAD
 ### Windows:
 - Download the code from the "Code" button at the top.
 - Extract the file and save the RetroPixel folder in a location of your choice.
@@ -61,23 +50,7 @@ RetroPixel Effect
 - Copy the `RetroPixel.scm` file to the folder `~/.config/GIMP/3.0/scripts/` (make sure it matches the version of GIMP you are using).
 - Open GIMP.
 - Test RetroPixel from **Filters > Blur > RetroPixel**.
-=======
-1. Open an image in GIMP
-2. Go to **Filters → Blur → RetroPixel**
-3. Choose a **Preset** or select **Custom** to adjust manually:
-   - **Presets**: Pre-configured settings for quick results
-     - PS1 Low-Res: 128x128, 16 colors
-     - PS1 Medium: 256x256, 32 colors
-     - N64 Style: 256x256, 64 colors
-     - Extreme Retro: 64x64, 8 colors
-   - **Custom**: Use the sliders below to configure manually
-4. Adjust **Dithering Pattern**:
-   - None (Solid): Clean color blocks
-   - Floyd-Steinberg (Best): Smooth dithering effect
-   - Positioned (Retro): Patterned dithering
-5. Choose a **Color Filter** for retro tinting (optional)
-6. Click **OK**
->>>>>>> origin/main
+
 
 ## Usage Examples
 
