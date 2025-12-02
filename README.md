@@ -2,7 +2,7 @@
 
 GIMP plugin that applies PS1/N64 style pixelation effects, ideal for creating retro textures for 3D objects.
 
-RetroPixel Effect
+RetroPixel is only compatible with GIMP 3.0 or later.
 
 ## Features
 
@@ -110,3 +110,4 @@ If you find this plugin useful, consider supporting:
 [![Support via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/gessendarien)
 
 Thank you! 💚🫰
+
