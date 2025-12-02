@@ -2,7 +2,11 @@
 
 GIMP plugin that applies PS1/N64 style pixelation effects, ideal for creating retro textures for 3D objects.
 
+<<<<<<< HEAD
+RetroPixel is only compatible with GIMP 3.0 or later.
+=======
 RetroPixel Effect
+>>>>>>> origin/main
 
 ## Features
 
@@ -15,9 +19,15 @@ RetroPixel Effect
 ## Preview
 
 <div align="center">
+<<<<<<< HEAD
+  <img src="screenshot_1.png" width="60%" alt="RetroPixel GIMP"/>
+  <br/>
+  <img src="screenshot_2.png" width="60%" alt="RetroPixel Effect GIMP"/>
+=======
   <img src="screenshot_1.png" width="60%" alt="Original Image"/>
   <br/>
   <img src="screenshot_2.png" width="60%" alt="RetroPixel Effect Applied"/>
+>>>>>>> origin/main
 </div>
 
 ## Parameters
@@ -34,6 +44,24 @@ RetroPixel Effect
 
 ## Usage
 
+<<<<<<< HEAD
+### Windows:
+- Download the code from the "Code" button at the top.
+- Extract the file and save the RetroPixel folder in a location of your choice.
+- Open GIMP and go to **Edit > Preferences > Folders** (at the bottom of the left-hand menu).
+- Expand the option by clicking the arrow.
+- Go to **Plug-ins** and add the folder where you saved the script.
+- Restart GIMP.
+- Test RetroPixel from **Filters > Blur > RetroPixel**.
+
+### Linux:
+- Download the code from the "Code" button at the top.
+- Extract the file and save the RetroPixel folder in a location of your choice.
+- Grant all permissions to the `RetroPixel.scm` script.
+- Copy the `RetroPixel.scm` file to the folder `~/.config/GIMP/3.0/scripts/` (make sure it matches the version of GIMP you are using).
+- Open GIMP.
+- Test RetroPixel from **Filters > Blur > RetroPixel**.
+=======
 1. Open an image in GIMP
 2. Go to **Filters → Blur → RetroPixel**
 3. Choose a **Preset** or select **Custom** to adjust manually:
@@ -49,6 +77,7 @@ RetroPixel Effect
    - Positioned (Retro): Patterned dithering
 5. Choose a **Color Filter** for retro tinting (optional)
 6. Click **OK**
+>>>>>>> origin/main
 
 ## Usage Examples
 
