@@ -119,20 +119,20 @@
 
 ; Register
 (script-fu-register "script-fu-retro-pixel"
-  "RetroPixel"
-  "Apply PS1/N64 style pixelation with dithering and color filters. NOTE: When using Presets, the Pixel Size/Colors/Target values below are ignored. Choose 'Custom' to use manual settings."
-  "RetroPixel"
+  "RetroPixel..."
+  "Create authentic PS1/N64 style pixelated textures with color reduction and dithering"
+  "gessendarien"
   "GNU GPL v3"
   "2025"
   "RGB* GRAY*"
   SF-IMAGE "Image" 0
   SF-DRAWABLE "Drawable" 0
-  SF-OPTION "Preset" '("Custom (use values below)" "PS1 Low-Res (128x128, 16 colors)" "PS1 Medium (256x256, 32 colors)" "N64 Style (256x256, 64 colors)" "Extreme Retro (64x64, 8 colors)")
-  SF-ADJUSTMENT "Pixel Size (Custom only)" '(8 2 32 1 2 0 0)
-  SF-ADJUSTMENT "Number of Colors (Custom only)" '(32 4 256 1 8 0 0)
-  SF-ADJUSTMENT "Target Width - 0=keep (Custom only)" '(0 0 4096 1 64 0 0)
-  SF-ADJUSTMENT "Target Height - 0=keep (Custom only)" '(0 0 4096 1 64 0 0)
-  SF-OPTION "Dithering Pattern" '("None (Solid)" "Floyd-Steinberg (Best)" "Positioned (Retro)")
-  SF-OPTION "Color Filter (Retro Palette)" '("None" "Red" "Orange" "Yellow" "Green" "Blue" "Purple" "Pink" "Brown/Sepia" "White" "Black"))
+  SF-OPTION "Preset" '("Custom" "PS1 Low (128×128)" "PS1 Med (256×256)" "N64 (256×256)" "Extreme (64×64)")
+  SF-ADJUSTMENT "Pixel Size" '(8 2 32 1 2 0 0)
+  SF-ADJUSTMENT "Colors" '(32 4 256 1 8 0 0)
+  SF-ADJUSTMENT "Output Width (0 = original)" '(0 0 512 1 32 0 0)
+  SF-ADJUSTMENT "Output Height (0 = original)" '(0 0 512 1 32 0 0)
+  SF-OPTION "Dithering" '("None" "Floyd-Steinberg" "Positioned")
+  SF-OPTION "Color Tint" '("None" "Red" "Orange" "Yellow" "Green" "Blue" "Purple" "Pink" "Sepia" "White" "Black"))
 
-(script-fu-menu-register "script-fu-retro-pixel" "<Image>/Filters/Blur")
+(script-fu-menu-register "script-fu-retro-pixel" "<Image>/Filters/Distorts")

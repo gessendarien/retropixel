@@ -1,8 +1,10 @@
 # RetroPixel - GIMP Plugin
 
-GIMP plugin that applies PS1/N64 style pixelation effects, ideal for creating retro textures for 3D objects.
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
+![GIMP](https://img.shields.io/badge/GIMP-3.0%2B-green)
+![License](https://img.shields.io/badge/license-GPL%20v3-orange)
 
-RetroPixel is only compatible with GIMP 3.0 or later.
+GIMP plugin that applies PS1/N64 style pixelation effects, ideal for creating retro textures for 3D objects.
 
 ## Features
 
@@ -24,13 +26,13 @@ RetroPixel is only compatible with GIMP 3.0 or later.
 
 | Parameter | Description | Range | Default |
 |-----------|-------------|-------|---------|
-| **Preset** | Quick settings (Custom/PS1 Low/PS1 Medium/N64/Extreme) | - | Custom |
-| **Pixel Size** | Size of each pixel block (Custom only) | 2-32 | 8 |
-| **Number of Colors** | Colors in the palette (Custom only) | 4-256 | 32 |
-| **Target Width** | Target width in pixels, 0=keep original (Custom only) | 0-4096 | 0 |
-| **Target Height** | Target height in pixels, 0=keep original (Custom only) | 0-4096 | 0 |
-| **Dithering Pattern** | None/Floyd-Steinberg/Positioned | - | None (Solid) |
-| **Color Filter** | Apply retro color tint (None/Red/Orange/Yellow/etc.) | - | None |
+| **Preset** | Quick settings (Custom/PS1 Low/PS1 Med/N64/Extreme) | - | Custom |
+| **Pixel Size** | Size of each pixel block (ignored with presets) | 2-32 | 8 |
+| **Colors** | Colors in the palette (ignored with presets) | 4-256 | 32 |
+| **Output Width** | Output width in pixels, 0 = original (ignored with presets) | 0-512 | 0 |
+| **Output Height** | Output height in pixels, 0 = original (ignored with presets) | 0-512 | 0 |
+| **Dithering** | None / Floyd-Steinberg / Positioned | - | None |
+| **Color Tint** | Apply retro color tint (None/Red/Orange/Yellow/etc.) | - | None |
 
 ## Usage
 
@@ -41,7 +43,7 @@ RetroPixel is only compatible with GIMP 3.0 or later.
 - Expand the option by clicking the arrow.
 - Go to **Plug-ins** and add the folder where you saved the script.
 - Restart GIMP.
-- Test RetroPixel from **Filters > Blur > RetroPixel**.
+- Test RetroPixel from **Filters > Distorts > RetroPixel**.
 
 ### Linux:
 - Download the code from the "Code" button at the top.
@@ -49,36 +51,33 @@ RetroPixel is only compatible with GIMP 3.0 or later.
 - Grant all permissions to the `RetroPixel.scm` script.
 - Copy the `RetroPixel.scm` file to the folder `~/.config/GIMP/3.0/scripts/` (make sure it matches the version of GIMP you are using).
 - Open GIMP.
-- Test RetroPixel from **Filters > Blur > RetroPixel**.
+- Test RetroPixel from **Filters > Distorts > RetroPixel**.
 
 
 ## Usage Examples
 
 ### Texture for 3D model (64x64)
 ```
+Preset: Custom
 Pixel Size: 8
-Color Depth: 32
-Dither Amount: 10
-Target Width: 64
-Target Height: 64
+Colors: 32
+Output Width: 64
+Output Height: 64
+Dithering: Floyd-Steinberg
 ```
 
 ### Intense PS1 effect
 ```
-Pixel Size: 12
-Color Depth: 16
-Dither Amount: 15
-Target Width: 0
-Target Height: 0
+Preset: PS1 Low (128×128)
+Dithering: Positioned
+Color Tint: Sepia
 ```
 
 ### Soft N64 effect
 ```
-Pixel Size: 4
-Color Depth: 64
-Dither Amount: 5
-Target Width: 256
-Target Height: 256
+Preset: N64 (256×256)
+Dithering: Floyd-Steinberg
+Color Tint: None
 ```
 
 ## Recommended Workflow for 3D Textures
@@ -86,7 +85,7 @@ Target Height: 256
 1. Prepare your original texture in high resolution
 2. Apply the RetroPixel plugin with your target texture dimensions
 3. Export as PNG or TGA
-4. Import into your 3D engine (Unity, Unreal, Blender, etc.)
+4. Import into your 3D engine (Unity, GDevelop, Blender, etc.)
 5. Set the texture filter to "Point" or "Nearest" to maintain the pixelated effect
 
 ## License
